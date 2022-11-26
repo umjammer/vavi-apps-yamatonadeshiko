@@ -21,12 +21,12 @@ import vavi.apps.yamatonadeshiko.Shuffler.Member;
 public interface MailDAO {
 
     /**
-     * ���j�b�g���Ɩ{�����ōi�荞�񂾃��[�����M�҂��擾���܂��B
+     * ユニット名と本日分で絞り込んだメール送信者を取得します。
      * @return 0: female manager, 1: female, 2: male manager, 3:male 
      */
     List<Member>[] load(String unit) throws SQLException;
 
-    /** ���j�b�g���Ɩ{�����ōi�荞�񂾃��[�����M�҂��폜���܂��B */
+    /** ユニット名と本日分で絞り込んだメール送信者を削除します。 */
     void clear(String unit) throws SQLException;
 }
 
