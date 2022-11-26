@@ -110,7 +110,7 @@ public class MySQLMailDAO implements MailDAO {
         }
     }
 
-    /** JDBC 設定が書かれたプロパティファイル */
+    /** JDBC 險ｭ螳壹′譖ｸ縺九ｌ縺溘�励Ο繝代ユ繧｣繝輔ぃ繧､繝ｫ */
     private static final ResourceBundle rb = ResourceBundle.getBundle("vavi.apps.yamatonadeshiko.yamatonadeshiko", Locale.getDefault());
 
     /** */

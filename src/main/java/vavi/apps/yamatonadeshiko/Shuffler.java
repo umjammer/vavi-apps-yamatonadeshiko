@@ -21,25 +21,25 @@ import java.util.TreeMap;
  */
 public abstract class Shuffler {
 
-    /** ƒƒ“ƒo[‚Ìƒ^ƒCƒv‚ğ•\‚µ‚Ü‚·B */
+    /** ãƒ¡ãƒ³ãƒãƒ¼ã®ã‚¿ã‚¤ãƒ—ã‚’è¡¨ã—ã¾ã™ã€‚ */
     public enum Type {
-        /** –¢’è‹` */
+        /** æœªå®šç¾© */
         Unknown,
-        /** —Š²– */
+        /** å¥³å¹¹äº‹ */
         FemaleManager,
-        /** —ƒƒ“ƒo[ */
+        /** å¥³ãƒ¡ãƒ³ãƒãƒ¼ */
         Female,
-        /** ’jŠ²–  */
+        /** ç”·å¹¹äº‹  */
         MaleManager,
-        /** ’jƒƒ“ƒo[ */
+        /** ç”·ãƒ¡ãƒ³ãƒãƒ¼ */
         Male;
-        /** Š²–‚©‚Ç‚¤‚©B */
+        /** å¹¹äº‹ã‹ã©ã†ã‹ã€‚ */
         public boolean isManager() {
             return (ordinal() & 0x01) != 0;
         }
     }
 
-    /** ƒƒ“ƒo[‚ğ•\‚µ‚Ü‚·B */
+    /** ãƒ¡ãƒ³ãƒãƒ¼ã‚’è¡¨ã—ã¾ã™ã€‚ */
     public static class Member implements Comparable<Member> {
         public String email;
         public Type type;
@@ -52,18 +52,18 @@ public abstract class Shuffler {
     }
 
     /**
-     * ƒ‰ƒ“ƒ_ƒ}ƒCƒU[
-     * TODO êŠ‚¢‚Ü‚¢‚¿A‚»‚ê‚¼‚ê‚ÅÀ‘•‚·‚×‚«
+     * ãƒ©ãƒ³ãƒ€ãƒã‚¤ã‚¶ãƒ¼
+     * TODO å ´æ‰€ã„ã¾ã„ã¡ã€ãã‚Œãã‚Œã§å®Ÿè£…ã™ã¹ã
      */
     protected Random random = new Random(System.currentTimeMillis());
 
     /**
-     * ƒVƒƒƒbƒtƒ‹Œ‹‰Ê‚ğƒXƒgƒA‚µ‚Ü‚·B
-     * TODO êŠ‚¢‚Ü‚¢‚¿A‚»‚ê‚¼‚ê‚ÅÀ‘•‚·‚×‚«
+     * ã‚·ãƒ£ãƒƒãƒ•ãƒ«çµæœã‚’ã‚¹ãƒˆã‚¢ã—ã¾ã™ã€‚
+     * TODO å ´æ‰€ã„ã¾ã„ã¡ã€ãã‚Œãã‚Œã§å®Ÿè£…ã™ã¹ã
      */
     protected SortedMap<Member, Member> pair = new TreeMap<Member, Member>();
 
-    /** ƒVƒƒƒbƒtƒ‹ƒAƒ‹ƒSƒŠƒYƒ€‚ğÀ‘•‚µ‚Ä‚­‚¾‚³‚¢B */
+    /** ã‚·ãƒ£ãƒƒãƒ•ãƒ«ã‚¢ãƒ«ã‚´ãƒªã‚ºãƒ ã‚’å®Ÿè£…ã—ã¦ãã ã•ã„ã€‚ */
     public abstract Map<Member, Member> shuffle(List<Member> females, List<Member> males);
 }
 

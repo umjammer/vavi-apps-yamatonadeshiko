@@ -42,7 +42,7 @@ public class Version2Shuffler extends Shuffler {
     }
 
     /**
-     * •Ğ«‚ğƒVƒƒƒbƒtƒ‹‚µ‚Ü‚·B
+     * ç‰‡æ€§ã‚’ã‚·ãƒ£ãƒƒãƒ•ãƒ«ã—ã¾ã™ã€‚
      * @param sender
      * @param receiver 
      */
@@ -67,20 +67,20 @@ public class Version2Shuffler extends Shuffler {
         }
     }
 
-    /** ƒVƒƒƒbƒtƒ‹Œ‹‰Ê‚ª³‚µ‚¢‚©‚Ç‚¤‚©ƒ`ƒFƒbƒN‚µ‚Ü‚·B */
+    /** ã‚·ãƒ£ãƒƒãƒ•ãƒ«çµæœãŒæ­£ã—ã„ã‹ã©ã†ã‹ãƒã‚§ãƒƒã‚¯ã—ã¾ã™ã€‚ */
     private boolean isShuffledValid() {
         Set<String> sendReceivePair = new HashSet<String>();
 
         for (Member member : pair.keySet()) {
             Member couple = pair.get(member);
 
-            // Š²–“¯m‚Í–³‚µ
+            // å¹¹äº‹åŒå£«ã¯ç„¡ã—
             if (member.type.isManager() && couple.type.isManager()) {
 //log.debug("both manager: " + member);
                 return false;
             }
 
-            // ‘—‚èA‘—‚ç‚ê‚ª“¯‚¶‚à‚Ì“¯m‚Í–³‚µ
+            // é€ã‚Šã€é€ã‚‰ã‚ŒãŒåŒã˜ã‚‚ã®åŒå£«ã¯ç„¡ã—
             // A -> B
             // B -> A
 
@@ -90,11 +90,11 @@ public class Version2Shuffler extends Shuffler {
                 return false;
             }
 
-            // ‘—‚Á‚½{‘—‚ç‚ê‚½A‘—‚ç‚ê‚½{‘—‚Á‚½ƒyƒA‚ª“¯‚¶‚Ì‚à–³‚µ
-            // A -> —1
-            // —2 -> A
-            // —2 -> B
-            // B -> —1
+            // é€ã£ãŸï¼‹é€ã‚‰ã‚ŒãŸã€é€ã‚‰ã‚ŒãŸï¼‹é€ã£ãŸãƒšã‚¢ãŒåŒã˜ã®ã‚‚ç„¡ã—
+            // A -> å¥³1
+            // å¥³2 -> A
+            // å¥³2 -> B
+            // B -> å¥³1
 
             // A: if pair.containsValue(A)
             if (pair.containsValue(member)) {

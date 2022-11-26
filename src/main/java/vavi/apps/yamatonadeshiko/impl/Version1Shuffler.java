@@ -34,7 +34,7 @@ public class Version1Shuffler extends Shuffler {
     }
 
     /**
-     * @param sender Manager ‚ğ‘O‚É‚µ‚Ä‚¨‚©‚È‚¢‚Æ–³ŒÀƒ‹[ƒv‚É‚È‚é‚±‚Æ‚ª‚ ‚éHHH
+     * @param sender Manager ã‚’å‰ã«ã—ã¦ãŠã‹ãªã„ã¨ç„¡é™ãƒ«ãƒ¼ãƒ—ã«ãªã‚‹ã“ã¨ãŒã‚ã‚‹ï¼Ÿï¼Ÿï¼Ÿ
      * @param receiver 
      */
     private void shuffleInternal(List<Member> sender, List<Member> receiver) {

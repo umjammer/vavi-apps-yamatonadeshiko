@@ -9,14 +9,13 @@ package vavi.apps.yamatonadeshiko.impl;
 import java.util.List;
 import java.util.Map;
 
-import org.junit.Test;
-
+import org.junit.jupiter.api.Test;
 import vavi.apps.yamatonadeshiko.MailDAO;
 import vavi.apps.yamatonadeshiko.Shuffler;
 import vavi.apps.yamatonadeshiko.UnitDAO;
 import vavi.apps.yamatonadeshiko.Shuffler.Member;
 
-import static junit.framework.Assert.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 
 /**

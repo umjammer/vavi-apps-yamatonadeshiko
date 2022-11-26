@@ -30,7 +30,7 @@ public class LocalFileUnitDAO implements UnitDAO {
     /** */
     private static Log log = LogFactory.getLog(LocalFileUnitDAO.class);
 
-    /** unit –¼‚ª‘‚©‚ê‚Ä‚¢‚éƒtƒ@ƒCƒ‹–¼ */
+    /** unit åãŒæ›¸ã‹ã‚Œã¦ã„ã‚‹ãƒ•ã‚¡ã‚¤ãƒ«å */
     private static String file;
 
     /* @see vavi.apps.yamatonadeshiko.UnitDAO#load() */
@@ -49,7 +49,7 @@ public class LocalFileUnitDAO implements UnitDAO {
         writer.close();
     }
 
-    /** ƒtƒ@ƒCƒ‹–¼‚ğw’è‚·‚éƒvƒƒpƒeƒBƒtƒ@ƒCƒ‹ */
+    /** ãƒ•ã‚¡ã‚¤ãƒ«åã‚’æŒ‡å®šã™ã‚‹ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ãƒ•ã‚¡ã‚¤ãƒ« */
     private static final ResourceBundle rb = ResourceBundle.getBundle("vavi.apps.yamatonadeshiko.yamatonadeshiko", Locale.getDefault());
 
     /** */

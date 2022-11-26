@@ -19,11 +19,11 @@ import java.io.IOException;
  */
 public interface UnitDAO {
 
-    /** ファイルの値を読み込みます。 */
+    /** 繝輔ぃ繧､繝ｫ縺ｮ蛟､繧定ｪｭ縺ｿ霎ｼ縺ｿ縺ｾ縺吶� */
     public abstract String load() throws IOException;
 
     /**
-     * ファイルに値を書き込みます。
+     * 繝輔ぃ繧､繝ｫ縺ｫ蛟､繧呈嶌縺崎ｾｼ縺ｿ縺ｾ縺吶�
      * @param unit use ASCII
      */
     public abstract void save(String unit) throws IOException;

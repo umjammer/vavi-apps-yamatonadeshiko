@@ -33,19 +33,19 @@ public class Mailer {
     /** */
     private static Log log = LogFactory.getLog(Mailer.class);
 
-    /** ƒoƒbƒ`ƒ‚[ƒh‚Ì Transport */
+    /** ãƒãƒƒãƒãƒ¢ãƒ¼ãƒ‰ã® Transport */
     private Transport transport;
-    /** ƒoƒbƒ`ƒ‚[ƒh‚Ì session */
+    /** ãƒãƒƒãƒãƒ¢ãƒ¼ãƒ‰ã® session */
     private Session session;
-    /** FROM: ƒwƒbƒ_’l */
+    /** FROM: ãƒ˜ãƒƒãƒ€å€¤ */
     private String from;
 
-    /** ƒ^ƒCƒgƒ‹A–{•¶‚ÌƒGƒ“ƒR[ƒfƒBƒ“ƒO */
+    /** ã‚¿ã‚¤ãƒˆãƒ«ã€æœ¬æ–‡ã®ã‚¨ãƒ³ã‚³ãƒ¼ãƒ‡ã‚£ãƒ³ã‚° */
     private static String encoding;
-    /** ƒ[ƒ‹‘—M—pƒzƒXƒg */
+    /** ãƒ¡ãƒ¼ãƒ«é€ä¿¡ç”¨ãƒ›ã‚¹ãƒˆ */
     private static String smtpHost;
 
-    /** ƒoƒbƒ`ƒ‚[ƒh‚ğŠJn‚µ‚Ü‚·B */
+    /** ãƒãƒƒãƒãƒ¢ãƒ¼ãƒ‰ã‚’é–‹å§‹ã—ã¾ã™ã€‚ */
     public void open(String from) throws MessagingException {
         Properties props = new Properties();
         props.put("mail.smtp.host", smtpHost);
@@ -60,7 +60,7 @@ public class Mailer {
         transport.connect();
     }
 
-    /** ƒ[ƒ‹‚ğ‘—‚è‚Ü‚·B */
+    /** ãƒ¡ãƒ¼ãƒ«ã‚’é€ã‚Šã¾ã™ã€‚ */
     public void write(String to, String subject, String text)
         throws MessagingException {
 
@@ -73,12 +73,12 @@ public class Mailer {
         transport.sendMessage(mimeMessage, new Address[] { new InternetAddress(to) });
     }
 
-    /** ƒoƒbƒ`ƒ‚[ƒh‚ğI—¹‚µ‚Ü‚·B */
+    /** ãƒãƒƒãƒãƒ¢ãƒ¼ãƒ‰ã‚’çµ‚äº†ã—ã¾ã™ã€‚ */
     public void close() throws MessagingException {
         transport.close();
     }
 
-    /** ƒ[ƒ‹İ’è‚ª‘‚©‚ê‚Ä‚¢‚éƒvƒƒpƒeƒBƒtƒ@ƒCƒ‹ */
+    /** ãƒ¡ãƒ¼ãƒ«è¨­å®šãŒæ›¸ã‹ã‚Œã¦ã„ã‚‹ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ãƒ•ã‚¡ã‚¤ãƒ« */
     private static final ResourceBundle rb = ResourceBundle.getBundle("vavi.apps.yamatonadeshiko.yamatonadeshiko", Locale.getDefault());
 
     /** */
